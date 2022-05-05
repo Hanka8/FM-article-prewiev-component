@@ -1,0 +1,226 @@
+:root {
+  --gray3: hsl(217, 19%, 35%);
+  --gray2: hsl(214, 17%, 51%);
+  --gray1: hsl(212, 23%, 69%);
+  --gray0: hsl(210, 46%, 95%);
+  --fontSize: 0.8125rem;
+  --fontWeight1: 500;
+  --fontWeight2: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray0);
+  font-family: 'Manrope', sans-serif;
+  font-size: var(--fontSize);
+  color: var(--gray3);
+}
+
+/* __________________________
+########### BOXES ###########
+_____________________________ */
+
+.card {
+  width: 55%;
+  height: 20rem;
+  border-radius: 15px;
+  display: flex;
+  background-color: white;
+}
+
+.picBox1 {
+  width: 55rem;
+  background-image: url(images/drawers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.textBox1 {
+  padding: 5% 7% 5% 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactBox2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.initialsBox3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  margin-left: 3%;
+}
+
+/* _________________________
+########### ITEMS #########
+___________________________ */
+
+.text {
+  line-height: 1.7;
+  color: var(--gray2);
+}
+
+.avatar {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: var(--fontWeight2);
+  width: 100%;
+}
+
+.date {
+  color: var(--gray1);
+}
+
+.shareBtn {
+  padding: 2%;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  left: 45%;
+  fill: var(--gray2);
+}
+
+.shareBtn:hover {
+  fill: white;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: var(--gray2);
+}
+
+/* #########################
+###### TOGGLE THIS ######### */
+
+.shareBoxNone {
+  display: none;
+}
+
+.shareBoxVisible {
+  position: absolute;
+  bottom: 180%;
+  left: 58%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  align-items: center;
+  background-color: var(--gray3);
+  width: 10rem;
+  color: var(--gray1);
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 5px;
+}
+
+
+/* ###### TOGGLE THIS #######
+############################ */
+
+.btn {
+  background-color: var(--gray3);
+  border: none;
+  cursor: pointer;
+}
+
+.square {
+  background-color: var(--gray3);
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  z-index: 1;
+}
+.adressBox2Mobile {
+  display: none;
+}
+
+/* _____________________________
+########### MEDIA ##############
+_____________________________ */
+
+@media (max-width: 1074px) {
+  .card {
+    flex-wrap: wrap;
+    height: 32rem;
+    width: 85%;
+    align-content: flex-start;
+  }
+  .picBox1 {
+    height: 37%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+  }
+  .textBox1 {
+    padding: 5% 8%;
+    margin-top: 5%;
+  }
+  .text {
+    margin-top: 5%;
+  }
+  .shareBtn {
+    padding: 3%;
+    left: 20%;
+  }
+  .initialsBox3 {
+    margin-left: 8%;
+  }
+  .avatar {
+    width: 15%;
+  }
+  .shareBoxVisible {
+    display: none;
+  }
+  .contactBox2 {
+    margin-top: 10%;
+  }
+  /* ____toggling____ */
+  .hide {
+    display: none;
+  }
+  .fuckIt {
+    display: flex;
+    height: 4.5%;
+    align-items: center;
+    justify-content: flex-start;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--gray3);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: var(--gray1);
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 5px;
+  }
+  /* ____toggling____ */
+
+  .shareBtn {
+    padding: 10px;
+  }
+  .btn {
+    margin-left: 2.5%;
+  }
+  .shareText {
+    margin-left: 10%;
+    margin-right: 4%;
+  }
+}
